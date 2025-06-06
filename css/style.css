@@ -1,3 +1,15 @@
+.custom-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+nav .brand-logo {
+  left: 0 !important;
+  transform: none !important;
+  padding-left: 16px; /* kasih jarak dari tepi */
+}
+
 .slider h3,
 .slider h5,
 .klien {
@@ -45,7 +57,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #ffffff; /* Ubah ke putih */
+  background-color: #ffffff;
   border-radius: 8px;
 }
 
@@ -62,6 +74,11 @@ footer {
     flex: 1 1 calc(33.33% - 20px);
     max-width: none;
   }
+
+  .sidenav {
+    top: 64px !important;
+    height: calc(100% - 64px);
+  }
 }
 
 /* MOBILE */
@@ -73,5 +90,10 @@ footer {
 
   .layanan-card {
     max-width: 60%;
+  }
+
+  sidenav {
+    top: 56px !important;
+    height: calc(100% - 56px);
   }
 }

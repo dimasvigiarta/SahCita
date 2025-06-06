@@ -25,7 +25,7 @@
 
   <body id="home" class="scrollspy">
     <!-- NAVBAR -->
-    <div class="navbar-fixed">
+    <!-- <div class="navbar-fixed">
       <nav class="blue darken-4">
         <div class="container">
           <div class="nav-wrapper">
@@ -58,15 +58,72 @@
           </div>
         </div>
       </nav>
+    </div> -->
+
+    <!-- Trigger / Hamburger
+    <a href="#" data-target="mobile-nav" class="sidenav-trigger right"
+      ><i class="material-icons">menu</i></a
+    > -->
+
+    <!-- NAVBAR -->
+    <div class="navbar-fixed">
+      <nav class="blue darken-4">
+        <div class="custom-container">
+          <div class="nav-wrapper">
+            <!-- Logo SahCita -->
+            <a
+              href="#home"
+              class="brand-logo"
+              style="display: flex; align-items: center"
+            >
+              <img
+                src="img/logo/biru.png"
+                alt="Logo SahCita"
+                style="height: 40px; margin-right: 6px"
+              />
+              <strong>
+                <span style="color: #ffa500">Sah</span>
+                <span style="color: #800080">Cita</span>
+              </strong>
+            </a>
+
+            <!-- Hamburger Menu -->
+            <a href="#" data-target="mobile-nav" class="sidenav-trigger right">
+              <i class="material-icons">menu</i>
+            </a>
+
+            <!-- Menu Desktop -->
+            <ul class="right hide-on-med-and-down">
+              <li><a href="#TentangKami">Tentang Kami</a></li>
+              <li><a href="#klien">Klien</a></li>
+              <li><a href="#layanankami">Layanan kami</a></li>
+              <li><a href="#galeri">Galeri</a></li>
+              <li><a href="#kontak">Kontak kami</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </div>
 
-    <!-- sidenav -->
-    <ul class="sidenav" id="mobile-nav">
-      <li><a href="#TentangKami">Tentang Kami</a></li>
-      <li><a href="#layanankami">Layanan kami</a></li>
-      <li><a href="#klien">Klien</a></li>
-      <li><a href="#galeri">Galeri</a></li>
-      <li><a href="#kontak">Kontak kami</a></li>
+    <!-- Sidenav Content -->
+    <ul class="sidenav blue darken-4 white-text" id="mobile-nav">
+      <!-- Tombol Panah Tutup -->
+      <li style="margin-bottom: -10px">
+        <a
+          href="#!"
+          class="sidenav-close"
+          style="padding-left: 32px; display: inline-block; width: auto"
+        >
+          <i class="material-icons" style="color: white">arrow_back</i>
+        </a>
+      </li>
+
+      <!-- side navbar -->
+      <li><a href="#TentangKami" style="color: white">Tentang Kami</a></li>
+      <li><a href="#layanankami" style="color: white">Layanan kami</a></li>
+      <li><a href="#klien" style="color: white">Klien</a></li>
+      <li><a href="#galeri" style="color: white">Galeri</a></li>
+      <li><a href="#kontak" style="color: white">Kontak kami</a></li>
     </ul>
 
     <!-- slider -->
@@ -443,6 +500,13 @@
       const scrol = document.querySelectorAll(".scrollspy");
       M.ScrollSpy.init(scrol, {
         scrollOffset: 50,
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var elems = document.querySelectorAll(".sidenav");
+        var instances = M.Sidenav.init(elems, {
+          edge: "right", // agar muncul dari kanan
+        });
       });
     </script>
   </body>
