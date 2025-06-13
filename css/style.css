@@ -7,7 +7,7 @@
 nav .brand-logo {
   left: 0 !important;
   transform: none !important;
-  padding-left: 16px; /* kasih jarak dari tepi */
+  padding-left: 16px;
 }
 
 .slider h3,
@@ -67,22 +67,112 @@ footer {
   cursor: pointer;
 }
 
+/* testimoni */
+.testimoni-section {
+  overflow: hidden;
+  background-color: #f9f9f9;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+.testimoni-header {
+  padding-top: 0;
+  padding-bottom: 30px;
+}
+
+.testimoni-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.testimoni-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 25s linear infinite;
+}
+
+.testimoni-card {
+  min-width: 300px;
+  max-width: 300px;
+  margin: 0 15px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  transition: transform 0.3s;
+}
+
+.testimoni-card:hover {
+  transform: scale(1.03);
+}
+
+.testimoni-card h3 {
+  font-size: 1.1rem;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.testimoni-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 /* MEDIA */
 /* DEKSTOP */
 @media screen and (min-width: 993px) {
+  /* layanan */
   .layanan-card {
     flex: 1 1 calc(33.33% - 20px);
     max-width: none;
   }
 
+  /* side navbar */
   .sidenav {
     top: 64px !important;
     height: calc(100% - 64px);
   }
+
+  /* kenapa sahcita */
+  .content-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+  }
+
+  .image-column,
+  .text-column {
+    flex: 1 1 50%;
+    max-width: 50%;
+  }
+
+  /* testimoni */
+  .testimoni-card {
+    min-width: 300px;
+  }
+
+  .testimoni-heading {
+    font-size: 2rem;
+  }
 }
 
-/* MOBILE */
+/* TABLET & MOBILE */
 @media screen and (max-width: 992px) {
+  /* layanan */
   .layanan-wrapper {
     flex-direction: column;
     align-items: center;
@@ -92,7 +182,8 @@ footer {
     max-width: 60%;
   }
 
-  sidenav {
+  /* side navbar */
+  .sidenav {
     top: 56px !important;
     height: calc(100% - 56px);
   }
@@ -101,5 +192,40 @@ footer {
     left: 0 !important;
     transform: none !important;
     padding-left: 16px;
+  }
+
+  /* kenapa sahcita */
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .image-column,
+  .text-column {
+    flex: none;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /* testimoni */
+  .testimoni-card {
+    min-width: 250px;
+    max-width: 250px;
+    padding: 16px;
+    margin: 0 10px;
+  }
+
+  .testimoni-card h3 {
+    font-size: 1rem;
+  }
+
+  .testimoni-card p {
+    font-size: 0.85rem;
+  }
+
+  .testimoni-heading {
+    font-size: 1.5rem;
   }
 }
