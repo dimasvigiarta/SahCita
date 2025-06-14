@@ -22,7 +22,7 @@
     <title>SahCita</title>
   </head>
 
-  <body id="home" class="scrollspy">
+  <body>
     <!-- NAVBAR -->
     <div class="navbar-fixed">
       <nav class="blue darken-4">
@@ -30,7 +30,7 @@
           <div class="nav-wrapper">
             <!-- Logo SahCita -->
             <a
-              href="#home"
+              href="#"
               class="brand-logo"
               style="display: flex; align-items: center"
             >
@@ -189,7 +189,7 @@
     </div>
 
     <!-- Kenapa SahCita -->
-    <section>
+    <section class="kenapa-sahcita">
       <div class="container">
         <h3 class="center light grey-text text-darken-3">Kenapa SahCita</h3>
 
@@ -340,7 +340,7 @@
               <h4 style="color: #2d2d2d">Hubungi Kami</h4>
               <div style="text-align: center; margin-top: 20px">
                 <a
-                  href="https://wa.me/6282335486623"
+                  href="https://wa.me/6282335486623?text=Halo%20SahCita%2C%20saya%20tertarik%20dengan%20layanan%20Anda."
                   target="_blank"
                   rel="noopener noreferrer"
                   class="btn waves-effect"
@@ -445,6 +445,29 @@
       </div>
     </section>
 
+    <!-- tombol scroll ke atas -->
+    <button
+      class="scroll-top-btn"
+      onclick="scrollToTop()"
+      title="Kembali ke atas"
+    >
+      <span class="material-icons">keyboard_arrow_up</span>
+    </button>
+
+    <!-- Tombol WhatsApp Mengambang -->
+    <a
+      href="https://wa.me/6282335486623?text=Halo%20SahCita%2C%20saya%20ingin%20bertanya%20lebih%20lanjut"
+      class="wa-float"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat via WhatsApp"
+    >
+      <img
+        src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png"
+        alt="WhatsApp Icon"
+      />
+    </a>
+
     <!-- footer -->
     <footer class="blue darken-4 white-text center">
       <p class="flow-text">CV Cita Kreasi Abadi. Copyright 2025.</p>
@@ -481,6 +504,10 @@
           edge: "right",
         });
       });
+
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
     </script>
   </body>
 </html>

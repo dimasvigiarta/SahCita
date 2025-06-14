@@ -10,12 +10,14 @@ nav .brand-logo {
   padding-left: 16px;
 }
 
+/* slider */
 .slider h3,
 .slider h5,
 .klien {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
+/* paralax */
 .parallax-container {
   height: 370px;
 }
@@ -25,16 +27,95 @@ nav .brand-logo {
   opacity: 0.8 !important;
 }
 
+/* klien */
 .klien img {
   max-width: 150px;
   filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.9));
 }
 
+/* section dan footer */
 section,
 footer {
   padding: 20px 0;
 }
 
+/* tentang kami */
+.TentangKami {
+  padding: 40px 20px;
+}
+
+.TentangKami .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.TentangKami h5 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.TentangKami p {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.TentangKami .progress {
+  background-color: #eee;
+  height: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.TentangKami .progress .determinate {
+  height: 100%;
+  background-color: #800080;
+  border-radius: 8px;
+}
+
+/* kenapa sahcita */
+.kenapa-sahcita {
+  padding: 10px 20px;
+}
+
+.kenapa-sahcita .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.kenapa-sahcita .content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.kenapa-sahcita .image-column img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.kenapa-sahcita .text-column h5 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #333;
+}
+
+.kenapa-sahcita .text-column p {
+  text-align: justify;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* layanan */
 .layanan-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -65,6 +146,11 @@ footer {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   cursor: pointer;
+}
+
+/* galeri */
+.galeri h3 {
+  margin-bottom: 30px;
 }
 
 /* testimoni */
@@ -132,6 +218,69 @@ footer {
   }
 }
 
+/* Tombol WhatsApp Mengambang */
+.wa-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.wa-float:hover {
+  transform: scale(1.1);
+}
+
+/* Ikon di dalam tombol */
+.wa-float img {
+  width: 30px;
+  height: 30px;
+}
+
+/* tombol scrool keatas */
+
+.scroll-top-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #4a90f9;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  font-size: 20px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover */
+.scroll-top-btn:hover {
+  background-color: #8cb8fb;
+}
+
+/* Focus dan Active */
+.scroll-top-btn:focus,
+.scroll-top-btn:active {
+  background-color: #4a90f9;
+  outline: none;
+}
+
 /* MEDIA */
 /* DEKSTOP */
 @media screen and (min-width: 993px) {
@@ -148,16 +297,15 @@ footer {
   }
 
   /* kenapa sahcita */
-  .content-wrapper {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 20px;
+  .kenapa-sahcita .image-column,
+  .kenapa-sahcita .text-column {
+    flex: 1 1 45%;
   }
 
-  .image-column,
-  .text-column {
-    flex: 1 1 50%;
-    max-width: 50%;
+  .kenapa-sahcita .content-wrapper {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
   }
 
   /* testimoni */
@@ -167,6 +315,14 @@ footer {
 
   .testimoni-heading {
     font-size: 2rem;
+  }
+
+  /* tombol scroll keatas */
+  .scroll-top-btn {
+    width: 55px;
+    height: 55px;
+    bottom: 25px;
+    left: 25px;
   }
 }
 
@@ -194,19 +350,35 @@ footer {
     padding-left: 16px;
   }
 
-  /* kenapa sahcita */
-  .content-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+  /* tetang kami */
+  .TentangKami .col.m6 {
+    width: 100%;
+    display: block;
+    margin-bottom: 30px;
   }
 
-  .image-column,
-  .text-column {
-    flex: none;
-    max-width: 100%;
-    width: 100%;
+  .TentangKami h3 {
+    font-size: 45px;
+  }
+
+  .TentangKami h5 {
+    text-align: center;
+  }
+
+  /* kenapa sahcita */
+  .kenapa-sahcita .image-column,
+  .kenapa-sahcita .text-column {
+    flex: 1 1 100%;
+  }
+
+  .kenapa-sahcita .content-wrapper {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .kenapa-sahcita .text-column h5 {
+    text-align: center;
   }
 
   /* testimoni */
@@ -227,5 +399,26 @@ footer {
 
   .testimoni-heading {
     font-size: 1.5rem;
+  }
+
+  /* wshatsapp */
+  .wa-float {
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .wa-float img {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* scroll keatas */
+  .scroll-top-btn {
+    width: 45px;
+    height: 45px;
+    bottom: 15px;
+    left: 15px;
   }
 }
