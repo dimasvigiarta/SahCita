@@ -248,37 +248,37 @@ footer {
 }
 
 /* tombol scrool keatas */
-
 .scroll-top-btn {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
   background-color: #4a90f9;
   color: white;
   border: none;
+  padding: 12px;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  left: 20px;
+  bottom: 30px;
   z-index: 999;
-  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: background-color 0.3s ease;
 }
 
-/* Hover */
-.scroll-top-btn:hover {
+/* Hover harus punya prioritas lebih tinggi */
+.scroll-top-btn:hover,
+.scroll-top-btn:focus:hover,
+.scroll-top-btn:active:hover {
   background-color: #8cb8fb;
 }
 
-/* Focus dan Active */
-.scroll-top-btn:focus,
-.scroll-top-btn:active {
+/* Fokus tanpa hover */
+.scroll-top-btn:focus {
   background-color: #4a90f9;
   outline: none;
+}
+
+/* Aktif tanpa hover */
+.scroll-top-btn:active {
+  background-color: #4a90f9;
 }
 
 /* MEDIA */
@@ -401,8 +401,10 @@ footer {
     font-size: 1.5rem;
   }
 
-  /* wshatsapp */
+  /* WhatsApp */
   .wa-float {
+    position: fixed;
+    z-index: 997; /* Lebih rendah dari sidenav */
     width: 50px;
     height: 50px;
     bottom: 20px;
@@ -414,11 +416,34 @@ footer {
     height: 24px;
   }
 
-  /* scroll keatas */
+  /* Tombol Scroll ke Atas */
   .scroll-top-btn {
+    position: fixed;
+    z-index: 997; /* Lebih rendah dari sidenav */
     width: 45px;
     height: 45px;
     bottom: 15px;
     left: 15px;
   }
+
+  /* wshatsapp */
+  /* .wa-float {
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .wa-float img {
+    width: 24px;
+    height: 24px;
+  } */
+
+  /* scroll keatas */
+  /* .scroll-top-btn {
+    width: 45px;
+    height: 45px;
+    bottom: 15px;
+    left: 15px;
+  } */
 }
