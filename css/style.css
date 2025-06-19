@@ -218,7 +218,7 @@ footer {
   }
 }
 
-/* Tombol WhatsApp Mengambang */
+/* Tombol WhatsApp*/
 .wa-float {
   position: fixed;
   width: 60px;
@@ -241,7 +241,7 @@ footer {
   transform: scale(1.1);
 }
 
-/* Ikon di dalam tombol */
+/* Ikon*/
 .wa-float img {
   width: 30px;
   height: 30px;
@@ -263,7 +263,7 @@ footer {
   transition: background-color 0.3s ease;
 }
 
-/* Hover harus punya prioritas lebih tinggi */
+/* Hover*/
 .scroll-top-btn:hover,
 .scroll-top-btn:focus:hover,
 .scroll-top-btn:active:hover {
@@ -404,7 +404,7 @@ footer {
   /* WhatsApp */
   .wa-float {
     position: fixed;
-    z-index: 997; /* Lebih rendah dari sidenav */
+    z-index: 997;
     width: 50px;
     height: 50px;
     bottom: 20px;
@@ -419,31 +419,10 @@ footer {
   /* Tombol Scroll ke Atas */
   .scroll-top-btn {
     position: fixed;
-    z-index: 997; /* Lebih rendah dari sidenav */
+    z-index: 997;
     width: 45px;
     height: 45px;
     bottom: 15px;
     left: 15px;
   }
-
-  /* wshatsapp */
-  /* .wa-float {
-    width: 50px;
-    height: 50px;
-    bottom: 20px;
-    right: 20px;
-  }
-
-  .wa-float img {
-    width: 24px;
-    height: 24px;
-  } */
-
-  /* scroll keatas */
-  /* .scroll-top-btn {
-    width: 45px;
-    height: 45px;
-    bottom: 15px;
-    left: 15px;
-  } */
 }
