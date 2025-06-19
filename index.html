@@ -478,27 +478,9 @@
     <!--JavaScript -->
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script>
+      // Side Navbar
       const sideNav = document.querySelectorAll(".sidenav");
       M.Sidenav.init(sideNav);
-
-      const slider = document.querySelectorAll(".slider");
-      M.Slider.init(slider, {
-        indicators: false,
-        height: 400,
-        transition: 600,
-        interval: 3000,
-      });
-
-      const parallax = document.querySelectorAll(".parallax");
-      M.Parallax.init(parallax);
-
-      const materialbox = document.querySelectorAll(".materialboxed");
-      M.Materialbox.init(materialbox);
-
-      const scrol = document.querySelectorAll(".scrollspy");
-      M.ScrollSpy.init(scrol, {
-        scrollOffset: 50,
-      });
 
       document.addEventListener("DOMContentLoaded", function () {
         var elems = document.querySelectorAll(".sidenav");
@@ -507,6 +489,30 @@
         });
       });
 
+      // Slider
+      const slider = document.querySelectorAll(".slider");
+      M.Slider.init(slider, {
+        indicators: false,
+        height: 400,
+        transition: 600,
+        interval: 3000,
+      });
+
+      // Paralax
+      const parallax = document.querySelectorAll(".parallax");
+      M.Parallax.init(parallax);
+
+      // Materialbox galeri
+      const materialbox = document.querySelectorAll(".materialboxed");
+      M.Materialbox.init(materialbox);
+
+      // Scroll spy
+      const scrol = document.querySelectorAll(".scrollspy");
+      M.ScrollSpy.init(scrol, {
+        scrollOffset: 50,
+      });
+
+      // Top scroll
       function scrollToTop() {
         window.scrollTo({ top: 0, behavior: "smooth" });
       }
