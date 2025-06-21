@@ -11,9 +11,7 @@ nav .brand-logo {
 }
 
 /* text shadow */
-.slider h3,
-.slider h5,
-.klien {
+#hero-container {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
@@ -76,6 +74,26 @@ footer {
   height: 100%;
   background-color: #800080;
   border-radius: 8px;
+}
+
+.TentangKami .progress-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.TentangKami .progress {
+  flex: 1;
+  margin: 0;
+}
+
+.TentangKami .progress-percent {
+  min-width: 40px;
+  font-weight: bold;
+  color: #555;
+  font-size: 14px;
+  text-align: right;
 }
 
 /* kenapa sahcita */
@@ -263,6 +281,13 @@ footer {
   transition: background-color 0.3s ease;
 }
 
+/* menghilangkan tombol */
+.scroll-top-btn.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
 /* Hover*/
 .scroll-top-btn:hover,
 .scroll-top-btn:focus:hover,
@@ -323,6 +348,11 @@ footer {
     height: 55px;
     bottom: 25px;
     left: 25px;
+  }
+  .scroll-top-btn.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
   }
 }
 
@@ -424,5 +454,11 @@ footer {
     height: 45px;
     bottom: 15px;
     left: 15px;
+  }
+
+  .scroll-top-btn.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
   }
 }

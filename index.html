@@ -135,25 +135,36 @@
           </div>
           <div class="col m6 light">
             <p>Penyusunan Legalitas Bisnis</p>
-            <div class="progress">
-              <div
-                class="determinate"
-                style="width: 100%; background-color: #800080"
-              ></div>
+            <div class="progress-container">
+              <div class="progress">
+                <div
+                  class="determinate"
+                  style="width: 100%; background-color: #800080"
+                ></div>
+              </div>
+              <span class="progress-percent">100%</span>
             </div>
+
             <p>Konsultasi dan Pendampingan Bisnis</p>
-            <div class="progress">
-              <div
-                class="determinate"
-                style="width: 90%; background-color: #800080"
-              ></div>
+            <div class="progress-container">
+              <div class="progress">
+                <div
+                  class="determinate"
+                  style="width: 95%; background-color: #800080"
+                ></div>
+              </div>
+              <span class="progress-percent">95%</span>
             </div>
+
             <p>Penyusunan Dokumen Bisnis</p>
-            <div class="progress">
-              <div
-                class="determinate"
-                style="width: 98%; background-color: #800080"
-              ></div>
+            <div class="progress-container">
+              <div class="progress">
+                <div
+                  class="determinate"
+                  style="width: 98%; background-color: #800080"
+                ></div>
+              </div>
+              <span class="progress-percent">98%</span>
             </div>
           </div>
         </div>
@@ -447,9 +458,8 @@
       </div>
     </section>
 
-    <!-- tombol scroll ke atas -->
     <button
-      class="scroll-top-btn"
+      class="scroll-top-btn hidden"
       onclick="scrollToTop()"
       title="Kembali ke atas"
     >
@@ -516,6 +526,20 @@
       function scrollToTop() {
         window.scrollTo({ top: 0, behavior: "smooth" });
       }
+
+      // Munculkan tombol scroll saat melewati section #TentangKami
+      const scrollBtn = document.querySelector(".scroll-top-btn");
+      const tentangSection = document.getElementById("TentangKami");
+
+      window.addEventListener("scroll", () => {
+        const sectionTop = tentangSection.getBoundingClientRect().top;
+
+        if (sectionTop <= window.innerHeight && window.scrollY > 0) {
+          scrollBtn.classList.remove("hidden");
+        } else {
+          scrollBtn.classList.add("hidden");
+        }
+      });
     </script>
   </body>
 </html>
