@@ -1,0 +1,429 @@
+/* Color */
+:root {
+  --blue: #00098a;
+  --biru: #313bbc;
+  --bluedark: #31316a;
+  --ungu: #690092;
+  --ungu1: #5d0081;
+  --orange: #ffa500;
+  --oren: #e19200;
+  --dark: #2c2c2c;
+  --abu: #545454;
+  --grey: #f1f1f1;
+  --white: #ffffff;
+  --green: #03c112;
+  --hijau: #009f0d;
+  --merah: #c41616;
+
+  --text-light: var(--white);
+  --text-dark: var(--dark);
+}
+
+.danger {
+  color: var(--merah);
+}
+
+.hijau {
+  color: var(--green);
+}
+
+.ungu {
+  columns: var(--ungu) !important;
+}
+
+/* ===== ANIMASI ===== */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 1.2s ease;
+}
+
+.fade-up.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== NAVBAR ===== */
+.mt--2 {
+  margin-top: -0.5rem !important;
+}
+
+.hr-dotted {
+  border-top: 1px dotted;
+  opacity: 0.25;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  font-size: 16px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+#navbar .nav-link {
+  color: var(--white);
+}
+
+#navbar.nav-scroll .nav-link {
+  color: var(--dark);
+}
+
+#navbar .nav-link:hover,
+#navbar.nav-scroll .nav-link:hover {
+  color: var(--orange);
+}
+
+#navbar {
+  background-color: var(--biru);
+  /* background-color: rgba(255, 255, 255, 0.195); 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px);  */
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  box-shadow: none;
+  border-bottom: none;
+  transition: padding 0.4s ease, background-color 0.4s ease,
+    box-shadow 0.3s ease;
+}
+
+#navbar.nav-scroll {
+  background-color: var(--white);
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border-bottom: none;
+}
+
+.navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar.nav-scroll .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%232c2c2c' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.navbar-nav .nav-link {
+  display: inline-block;
+  padding: 0.4rem 0;
+  margin: 0 1.5rem;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+#navbar .nav-link.active,
+#navbar.nav-scroll .nav-link.active {
+  font-weight: bold;
+  color: var(--orange) !important;
+}
+
+.btn-hubungi-dekstop {
+  color: var(--white);
+  background-color: var(--ungu);
+}
+
+.btn-hubungi-dekstop:hover {
+  color: var(--grey);
+  background-color: var(--ungu1);
+}
+
+.btn-hubungi-mobile {
+  color: var(--white);
+  background-color: var(--ungu);
+  padding: 0.45rem 1.25rem;
+  font-weight: 500;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  margin-left: 15px;
+  text-decoration: none;
+  display: inline-block;
+  text-align: left;
+}
+
+.btn-hubungi-mobile:hover {
+  color: var(--grey);
+  background-color: var(--ungu1);
+}
+
+/* ===== TENTANG KAMI ===== */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== LAYANAN ===== */
+.service-tab {
+  border: none;
+  background: none;
+  color: var(--ungu);
+  font-size: 1.2rem;
+  padding: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: default;
+}
+
+.service-tab:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.service-tab:hover,
+.service-tab.active {
+  color: var(--orange);
+}
+
+.service-tab.active::after {
+  content: "";
+  display: block;
+  width: 40%;
+  height: 3px;
+  background-color: var(--orange);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.service-content {
+  display: none;
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 0.4s ease;
+}
+
+.service-content.active {
+  display: block;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* TOMBOL WHATSAPP */
+
+.whatsapp-btn {
+  background-color: var(--green);
+  color: var(--white);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  border-radius: 999px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.whatsapp-btn i {
+  font-size: 1rem;
+}
+
+.whatsapp-btn:hover {
+  color: var(--grey);
+  background-color: var(--hijau);
+  text-decoration: none;
+}
+
+.whatsapp-btn:focus,
+.whatsapp-btn:active {
+  outline: none;
+  box-shadow: none;
+}
+
+a.btn:focus,
+a.btn:focus-visible,
+a.btn:active {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Khusus tombol WhatsApp di halaman kontak */
+section.container .whatsapp-btn {
+  display: inline-flex !important;
+  width: auto !important;
+  max-width: 100%;
+  padding: 10px 18px;
+  white-space: nowrap;
+}
+
+/* Animasi ikon saat hover dan aktif */
+.service-tab .service-icon {
+  color: var(--ungu);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.service-tab .service-icon,
+.service-tab .service-label {
+  cursor: pointer; /* pointer hanya untuk ikon dan teks */
+}
+
+.service-tab:hover .service-icon,
+.service-tab.active .service-icon {
+  color: var(--orange);
+  transform: scale(1.2);
+}
+
+/* === TESTIMONI === */
+.testimoni-section {
+  margin-top: 40px;
+}
+
+.testimonial-slider {
+  overflow: hidden;
+  position: relative;
+}
+
+.testimonial-track {
+  display: flex;
+  width: max-content;
+  animation: scrollLeft 30s linear infinite;
+}
+
+.testimonial-slider:hover .testimonial-track {
+  animation-play-state: paused;
+}
+
+.testimonial-item {
+  min-width: 300px;
+  margin-right: 20px;
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/*  Animasi Geser Halus */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Utility */
+.tombol {
+  border-radius: 40px;
+}
+
+/* ===== GALERI ===== */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.gallery-item img {
+  transition: transform 0.4s ease;
+  border-radius: 12px;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-item .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(13, 110, 253, 0.8);
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+  border-radius: 0 0 12px 12px;
+}
+
+.gallery-item:hover .overlay {
+  transform: translateY(0);
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item img {
+  transition: transform 0.4s ease;
+  border-radius: 12px;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-item .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 15px;
+  text-align: left;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+  border-radius: 0 0 12px 12px;
+}
+
+.gallery-item:hover .overlay {
+  transform: translateY(0);
+}
+
+.badge-custom {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 10;
+  font-size: 0.75rem;
+  padding: 0.4em 0.6em;
+}
+
+/* informasi lebih lanjut */
+.btn-success:hover {
+  background-color: var(--green) !important;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* ===== FOTER ===== */
+.bg-footer {
+  background-color: var(--biru);
+}
+.link {
+  color: var(--grey);
+}
+
+a.link:hover {
+  color: inherit !important;
+}
